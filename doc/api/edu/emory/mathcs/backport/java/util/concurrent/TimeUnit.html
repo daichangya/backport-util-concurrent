@@ -8,7 +8,7 @@
 TimeUnit
 </TITLE>
 
-<META NAME="keywords" CONTENT="edu.emory.mathcs.backport.java.util.concurrent.TimeUnit class">
+<META NAME="keywords" CONTENT="edu.emory.mathcs.util.concurrent.TimeUnit class">
 
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
 
@@ -87,7 +87,7 @@ edu.emory.mathcs.backport.java.util.concurrent</FONT>
 Class TimeUnit</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.backport.java.util.concurrent.TimeUnit</B>
+  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.util.concurrent.TimeUnit</B>
 </PRE>
 <DL>
 <DT><B>All Implemented Interfaces:</B> <DD>java.io.Serializable</DD>
@@ -126,7 +126,7 @@ A <tt>TimeUnit</tt> represents time durations at a given unit of
 <DL>
 <DT><B>Since:</B></DT>
   <DD>1.5</DD>
-<DT><B>See Also:</B><DD><A HREF="../../../../../../../serialized-form.html#edu.emory.mathcs.backport.java.util.concurrent.TimeUnit">Serialized Form</A></DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../serialized-form.html#TimeUnit">Serialized Form</A></DL>
 <HR>
 
 <P>
@@ -189,7 +189,7 @@ A <tt>TimeUnit</tt> represents time durations at a given unit of
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;long</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">convert</A></B>(long&nbsp;duration,
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, TimeUnit)">convert</A></B>(long&nbsp;duration,
         <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html" title="class in edu.emory.mathcs.backport.java.util.concurrent">TimeUnit</A>&nbsp;unit)</CODE>
 
 <BR>
@@ -378,7 +378,7 @@ public long <B>toNanos</B>(long&nbsp;duration)</PRE>
 <DT><B>Parameters:</B><DD><CODE>duration</CODE> - the duration
 <DT><B>Returns:</B><DD>the converted duration,
  or <tt>Long.MIN_VALUE</tt> if conversion would negatively
- overflow, or <tt>Long.MAX_VALUE</tt> if it would positively overflow.<DT><B>See Also:</B><DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)"><CODE>convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)</CODE></A></DL>
+ overflow, or <tt>Long.MAX_VALUE</tt> if it would positively overflow.<DT><B>See Also:</B><DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, TimeUnit)"><CODE>convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)</CODE></A></DL>
 </DD>
 </DL>
 <HR>
@@ -397,7 +397,7 @@ public long <B>toMicros</B>(long&nbsp;duration)</PRE>
 <DT><B>Parameters:</B><DD><CODE>duration</CODE> - the duration
 <DT><B>Returns:</B><DD>the converted duration,
  or <tt>Long.MIN_VALUE</tt> if conversion would negatively
- overflow, or <tt>Long.MAX_VALUE</tt> if it would positively overflow.<DT><B>See Also:</B><DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)"><CODE>convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)</CODE></A></DL>
+ overflow, or <tt>Long.MAX_VALUE</tt> if it would positively overflow.<DT><B>See Also:</B><DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, TimeUnit)"><CODE>convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)</CODE></A></DL>
 </DD>
 </DL>
 <HR>
@@ -416,7 +416,7 @@ public long <B>toMillis</B>(long&nbsp;duration)</PRE>
 <DT><B>Parameters:</B><DD><CODE>duration</CODE> - the duration
 <DT><B>Returns:</B><DD>the converted duration,
  or <tt>Long.MIN_VALUE</tt> if conversion would negatively
- overflow, or <tt>Long.MAX_VALUE</tt> if it would positively overflow.<DT><B>See Also:</B><DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)"><CODE>convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)</CODE></A></DL>
+ overflow, or <tt>Long.MAX_VALUE</tt> if it would positively overflow.<DT><B>See Also:</B><DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, TimeUnit)"><CODE>convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)</CODE></A></DL>
 </DD>
 </DL>
 <HR>
@@ -433,7 +433,7 @@ public long <B>toSeconds</B>(long&nbsp;duration)</PRE>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>duration</CODE> - the duration
-<DT><B>Returns:</B><DD>the converted duration.<DT><B>See Also:</B><DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)"><CODE>convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)</CODE></A></DL>
+<DT><B>Returns:</B><DD>the converted duration.<DT><B>See Also:</B><DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html#convert(long, TimeUnit)"><CODE>convert(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)</CODE></A></DL>
 </DD>
 </DL>
 <HR>
@@ -450,7 +450,7 @@ public void <B>timedWait</B>(java.lang.Object&nbsp;obj,
  into the form required by the <tt>Object.wait</tt> method.
 
  <p>For example, you could implement a blocking <tt>poll</tt>
- method (see <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html#poll(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)"><CODE>BlockingQueue.poll</CODE></A>)
+ method (see <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html#poll(long, TimeUnit)"><CODE>BlockingQueue.poll</CODE></A>)
  using:
 
  <pre>  public synchronized  Object poll(long timeout, TimeUnit unit) throws InterruptedException {

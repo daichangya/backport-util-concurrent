@@ -8,7 +8,7 @@
 PriorityBlockingQueue
 </TITLE>
 
-<META NAME="keywords" CONTENT="edu.emory.mathcs.backport.java.util.concurrent.PriorityBlockingQueue class">
+<META NAME="keywords" CONTENT="edu.emory.mathcs.util.concurrent.PriorityBlockingQueue class">
 
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
 
@@ -88,8 +88,8 @@ Class PriorityBlockingQueue</H2>
 <PRE>
 java.lang.Object
   <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by">java.util.AbstractCollection
-      <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/AbstractQueue.html" title="class in edu.emory.mathcs.backport.java.util">edu.emory.mathcs.backport.java.util.AbstractQueue</A>
-          <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.backport.java.util.concurrent.PriorityBlockingQueue</B>
+      <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/AbstractQueue.html" title="class in edu.emory.mathcs.backport.java.util">edu.emory.mathcs.util.AbstractQueue</A>
+          <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.util.concurrent.PriorityBlockingQueue</B>
 </PRE>
 <DL>
 <DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">BlockingQueue</A>, java.util.Collection, <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/Queue.html" title="interface in edu.emory.mathcs.backport.java.util">Queue</A>, java.io.Serializable</DD>
@@ -124,7 +124,7 @@ An unbounded <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/c
 <DL>
 <DT><B>Since:</B></DT>
   <DD>1.5</DD>
-<DT><B>See Also:</B><DD><A HREF="../../../../../../../serialized-form.html#edu.emory.mathcs.backport.java.util.concurrent.PriorityBlockingQueue">Serialized Form</A></DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../serialized-form.html#PriorityBlockingQueue">Serialized Form</A></DL>
 <HR>
 
 <P>
@@ -258,7 +258,7 @@ An unbounded <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/c
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/PriorityBlockingQueue.html#offer(java.lang.Object, long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">offer</A></B>(java.lang.Object&nbsp;o,
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/PriorityBlockingQueue.html#offer(java.lang.Object, long, TimeUnit)">offer</A></B>(java.lang.Object&nbsp;o,
       long&nbsp;timeout,
       <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html" title="class in edu.emory.mathcs.backport.java.util.concurrent">TimeUnit</A>&nbsp;unit)</CODE>
 
@@ -286,7 +286,7 @@ An unbounded <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/c
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.Object</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/PriorityBlockingQueue.html#poll(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">poll</A></B>(long&nbsp;timeout,
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/PriorityBlockingQueue.html#poll(long, TimeUnit)">poll</A></B>(long&nbsp;timeout,
      <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html" title="class in edu.emory.mathcs.backport.java.util.concurrent">TimeUnit</A>&nbsp;unit)</CODE>
 
 <BR>
@@ -362,7 +362,7 @@ An unbounded <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/c
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 </TABLE>
-&nbsp;<A NAME="methods_inherited_from_class_edu.emory.mathcs.backport.java.util.AbstractQueue"><!-- --></A>
+&nbsp;<A NAME="methods_inherited_from_class_edu.emory.mathcs.util.AbstractQueue"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 <TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
 <TD><B>Methods inherited from class edu.emory.mathcs.backport.java.util.<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/AbstractQueue.html" title="class in edu.emory.mathcs.backport.java.util">AbstractQueue</A></B></TD>
@@ -389,7 +389,7 @@ An unbounded <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/c
 <TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</CODE></TD>
 </TR>
 </TABLE>
-&nbsp;<A NAME="methods_inherited_from_class_edu.emory.mathcs.backport.java.util.Queue"><!-- --></A>
+&nbsp;<A NAME="methods_inherited_from_class_edu.emory.mathcs.util.Queue"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 <TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
 <TD><B>Methods inherited from interface edu.emory.mathcs.backport.java.util.<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/Queue.html" title="interface in edu.emory.mathcs.backport.java.util">Queue</A></B></TD>
@@ -601,7 +601,7 @@ public boolean <B>offer</B>(java.lang.Object&nbsp;o,
  unbounded this method will never block.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html#offer(java.lang.Object, long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">offer</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">BlockingQueue</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html#offer(java.lang.Object, long, TimeUnit)">offer</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">BlockingQueue</A></CODE></DL>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>o</CODE> - the element to add<DD><CODE>timeout</CODE> - This parameter is ignored as the method never blocks<DD><CODE>unit</CODE> - This parameter is ignored as the method never blocks
@@ -670,7 +670,7 @@ public java.lang.Object <B>poll</B>(long&nbsp;timeout,
  present on this queue.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html#poll(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">poll</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">BlockingQueue</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html#poll(long, TimeUnit)">poll</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">BlockingQueue</A></CODE></DL>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>timeout</CODE> - how long to wait before giving up, in units of

@@ -8,7 +8,7 @@
 Semaphore
 </TITLE>
 
-<META NAME="keywords" CONTENT="edu.emory.mathcs.backport.java.util.concurrent.Semaphore class">
+<META NAME="keywords" CONTENT="edu.emory.mathcs.util.concurrent.Semaphore class">
 
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
 
@@ -87,7 +87,7 @@ edu.emory.mathcs.backport.java.util.concurrent</FONT>
 Class Semaphore</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.backport.java.util.concurrent.Semaphore</B>
+  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.util.concurrent.Semaphore</B>
 </PRE>
 <DL>
 <DT><B>All Implemented Interfaces:</B> <DD>java.io.Serializable</DD>
@@ -208,7 +208,7 @@ A counting semaphore.  Conceptually, a semaphore maintains a set of
 <DL>
 <DT><B>Since:</B></DT>
   <DD>1.5</DD>
-<DT><B>See Also:</B><DD><A HREF="../../../../../../../serialized-form.html#edu.emory.mathcs.backport.java.util.concurrent.Semaphore">Serialized Form</A></DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../serialized-form.html#Semaphore">Serialized Form</A></DL>
 <HR>
 
 <P>
@@ -364,7 +364,7 @@ A counting semaphore.  Conceptually, a semaphore maintains a set of
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Semaphore.html#tryAcquire(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">tryAcquire</A></B>(long&nbsp;timeout,
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Semaphore.html#tryAcquire(long, TimeUnit)">tryAcquire</A></B>(long&nbsp;timeout,
            <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html" title="class in edu.emory.mathcs.backport.java.util.concurrent">TimeUnit</A>&nbsp;unit)</CODE>
 
 <BR>
@@ -528,7 +528,7 @@ public boolean <B>tryAcquire</B>()</PRE>
  This &quot;barging&quot; behavior can be useful in certain
  circumstances, even though it breaks fairness. If you want to honor
  the fairness setting, then use
- <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Semaphore.html#tryAcquire(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)"><CODE>tryAcquire(0, TimeUnit.SECONDS) </CODE></A>
+ <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Semaphore.html#tryAcquire(long, TimeUnit)"><CODE>tryAcquire(0, TimeUnit.SECONDS) </CODE></A>
  which is almost equivalent (it also detects interruption).
 <P>
 <DD><DL>

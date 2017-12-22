@@ -8,7 +8,7 @@
 ExecutorCompletionService
 </TITLE>
 
-<META NAME="keywords" CONTENT="edu.emory.mathcs.backport.java.util.concurrent.ExecutorCompletionService class">
+<META NAME="keywords" CONTENT="edu.emory.mathcs.util.concurrent.ExecutorCompletionService class">
 
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
 
@@ -87,7 +87,7 @@ edu.emory.mathcs.backport.java.util.concurrent</FONT>
 Class ExecutorCompletionService</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.backport.java.util.concurrent.ExecutorCompletionService</B>
+  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.util.concurrent.ExecutorCompletionService</B>
 </PRE>
 <DL>
 <DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/CompletionService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">CompletionService</A></DD>
@@ -182,7 +182,7 @@ A <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/C
 <B>Constructor Summary</B></FONT></TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorCompletionService.html#ExecutorCompletionService(edu.emory.mathcs.backport.java.util.concurrent.Executor)">ExecutorCompletionService</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executor.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Executor</A>&nbsp;executor)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorCompletionService.html#ExecutorCompletionService(Executor)">ExecutorCompletionService</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executor.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Executor</A>&nbsp;executor)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates an ExecutorCompletionService using the supplied
@@ -190,7 +190,7 @@ A <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/C
  <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/LinkedBlockingQueue.html" title="class in edu.emory.mathcs.backport.java.util.concurrent"><CODE>LinkedBlockingQueue</CODE></A> as a completion queue.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorCompletionService.html#ExecutorCompletionService(edu.emory.mathcs.backport.java.util.concurrent.Executor, edu.emory.mathcs.backport.java.util.concurrent.BlockingQueue)">ExecutorCompletionService</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executor.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Executor</A>&nbsp;executor,
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorCompletionService.html#ExecutorCompletionService(Executor, BlockingQueue)">ExecutorCompletionService</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executor.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Executor</A>&nbsp;executor,
                           <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/BlockingQueue.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">BlockingQueue</A>&nbsp;completionQueue)</CODE>
 
 <BR>
@@ -220,7 +220,7 @@ A <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/C
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Future.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Future</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorCompletionService.html#poll(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">poll</A></B>(long&nbsp;timeout,
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorCompletionService.html#poll(long, TimeUnit)">poll</A></B>(long&nbsp;timeout,
      <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html" title="class in edu.emory.mathcs.backport.java.util.concurrent">TimeUnit</A>&nbsp;unit)</CODE>
 
 <BR>
@@ -231,7 +231,7 @@ A <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/C
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Future.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Future</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorCompletionService.html#submit(edu.emory.mathcs.backport.java.util.concurrent.Callable)">submit</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A>&nbsp;task)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorCompletionService.html#submit(Callable)">submit</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A>&nbsp;task)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submits a value-returning task for execution and returns a Future
@@ -297,7 +297,7 @@ public <B>ExecutorCompletionService</B>(<A HREF="../../../../../../../edu/emory/
 <DD><CODE>java.lang.NullPointerException</CODE> - if executor is <tt>null</tt></DL>
 <HR>
 
-<A NAME="ExecutorCompletionService(edu.emory.mathcs.backport.java.util.concurrent.Executor, edu.emory.mathcs.backport.java.util.concurrent.BlockingQueue)"><!-- --></A><H3>
+<A NAME="ExecutorCompletionService(edu.emory.mathcs.util.concurrent.Executor, edu.emory.mathcs.backport.java.util.concurrent.BlockingQueue)"><!-- --></A><H3>
 ExecutorCompletionService</H3>
 <PRE>
 public <B>ExecutorCompletionService</B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executor.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Executor</A>&nbsp;executor,
@@ -333,7 +333,7 @@ public <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurr
  this task may be taken or polled.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/CompletionService.html#submit(edu.emory.mathcs.backport.java.util.concurrent.Callable)">submit</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/CompletionService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">CompletionService</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/CompletionService.html#submit(Callable)">submit</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/CompletionService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">CompletionService</A></CODE></DL>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>task</CODE> - the task to submit
@@ -420,7 +420,7 @@ public <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurr
  time if none are yet present.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/CompletionService.html#poll(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">poll</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/CompletionService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">CompletionService</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/CompletionService.html#poll(long, TimeUnit)">poll</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/CompletionService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">CompletionService</A></CODE></DL>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>timeout</CODE> - how long to wait before giving up, in units of

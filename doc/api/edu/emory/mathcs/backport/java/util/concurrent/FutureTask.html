@@ -8,7 +8,7 @@
 FutureTask
 </TITLE>
 
-<META NAME="keywords" CONTENT="edu.emory.mathcs.backport.java.util.concurrent.FutureTask class">
+<META NAME="keywords" CONTENT="edu.emory.mathcs.util.concurrent.FutureTask class">
 
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
 
@@ -87,7 +87,7 @@ edu.emory.mathcs.backport.java.util.concurrent</FONT>
 Class FutureTask</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.backport.java.util.concurrent.FutureTask</B>
+  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.util.concurrent.FutureTask</B>
 </PRE>
 <DL>
 <DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Future.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Future</A>, java.lang.Runnable</DD>
@@ -139,7 +139,7 @@ A cancellable asynchronous computation.  This class provides a base
 <B>Constructor Summary</B></FONT></TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/FutureTask.html#FutureTask(edu.emory.mathcs.backport.java.util.concurrent.Callable)">FutureTask</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A>&nbsp;callable)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/FutureTask.html#FutureTask(Callable)">FutureTask</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A>&nbsp;callable)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a <tt>FutureTask</tt> that will upon running, execute the
@@ -193,7 +193,7 @@ A cancellable asynchronous computation.  This class provides a base
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.Object</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/FutureTask.html#get(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">get</A></B>(long&nbsp;timeout,
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/FutureTask.html#get(long, TimeUnit)">get</A></B>(long&nbsp;timeout,
     <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html" title="class in edu.emory.mathcs.backport.java.util.concurrent">TimeUnit</A>&nbsp;unit)</CODE>
 
 <BR>
@@ -431,7 +431,7 @@ public java.lang.Object <B>get</B>(long&nbsp;timeout,
  to complete, and then retrieves its result, if available.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Future.html#get(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">get</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Future.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Future</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Future.html#get(long, TimeUnit)">get</A></CODE> in interface <CODE><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Future.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Future</A></CODE></DL>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>timeout</CODE> - the maximum time to wait<DD><CODE>unit</CODE> - the time unit of the timeout argument

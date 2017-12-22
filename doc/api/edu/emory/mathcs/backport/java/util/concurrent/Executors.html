@@ -8,7 +8,7 @@
 Executors
 </TITLE>
 
-<META NAME="keywords" CONTENT="edu.emory.mathcs.backport.java.util.concurrent.Executors class">
+<META NAME="keywords" CONTENT="edu.emory.mathcs.util.concurrent.Executors class">
 
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
 
@@ -87,7 +87,7 @@ edu.emory.mathcs.backport.java.util.concurrent</FONT>
 Class Executors</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.backport.java.util.concurrent.Executors</B>
+  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.util.concurrent.Executors</B>
 </PRE>
 <HR>
 <DL>
@@ -199,7 +199,7 @@ Factory and utility methods for <A HREF="../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ExecutorService</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newCachedThreadPool(edu.emory.mathcs.backport.java.util.concurrent.ThreadFactory)">newCachedThreadPool</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ThreadFactory.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ThreadFactory</A>&nbsp;threadFactory)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newCachedThreadPool(ThreadFactory)">newCachedThreadPool</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ThreadFactory.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ThreadFactory</A>&nbsp;threadFactory)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a thread pool that creates new threads as needed, but
@@ -219,7 +219,7 @@ Factory and utility methods for <A HREF="../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ExecutorService</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newFixedThreadPool(int, edu.emory.mathcs.backport.java.util.concurrent.ThreadFactory)">newFixedThreadPool</A></B>(int&nbsp;nThreads,
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newFixedThreadPool(int, ThreadFactory)">newFixedThreadPool</A></B>(int&nbsp;nThreads,
                    <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ThreadFactory.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ThreadFactory</A>&nbsp;threadFactory)</CODE>
 
 <BR>
@@ -239,7 +239,7 @@ Factory and utility methods for <A HREF="../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ScheduledExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ScheduledExecutorService</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newScheduledThreadPool(int, edu.emory.mathcs.backport.java.util.concurrent.ThreadFactory)">newScheduledThreadPool</A></B>(int&nbsp;corePoolSize,
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newScheduledThreadPool(int, ThreadFactory)">newScheduledThreadPool</A></B>(int&nbsp;corePoolSize,
                        <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ThreadFactory.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ThreadFactory</A>&nbsp;threadFactory)</CODE>
 
 <BR>
@@ -258,7 +258,7 @@ Factory and utility methods for <A HREF="../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ExecutorService</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newSingleThreadExecutor(edu.emory.mathcs.backport.java.util.concurrent.ThreadFactory)">newSingleThreadExecutor</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ThreadFactory.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ThreadFactory</A>&nbsp;threadFactory)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newSingleThreadExecutor(ThreadFactory)">newSingleThreadExecutor</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ThreadFactory.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ThreadFactory</A>&nbsp;threadFactory)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates an Executor that uses a single worker thread operating
@@ -277,7 +277,7 @@ Factory and utility methods for <A HREF="../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ScheduledExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ScheduledExecutorService</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newSingleThreadScheduledExecutor(edu.emory.mathcs.backport.java.util.concurrent.ThreadFactory)">newSingleThreadScheduledExecutor</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ThreadFactory.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ThreadFactory</A>&nbsp;threadFactory)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#newSingleThreadScheduledExecutor(ThreadFactory)">newSingleThreadScheduledExecutor</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ThreadFactory.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ThreadFactory</A>&nbsp;threadFactory)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a single-threaded executor that can schedule commands
@@ -286,7 +286,7 @@ Factory and utility methods for <A HREF="../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#privilegedCallable(edu.emory.mathcs.backport.java.util.concurrent.Callable)">privilegedCallable</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A>&nbsp;callable)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#privilegedCallable(Callable)">privilegedCallable</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A>&nbsp;callable)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent"><CODE>Callable</CODE></A> object that will, when
@@ -296,7 +296,7 @@ Factory and utility methods for <A HREF="../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#privilegedCallableUsingCurrentClassLoader(edu.emory.mathcs.backport.java.util.concurrent.Callable)">privilegedCallableUsingCurrentClassLoader</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A>&nbsp;callable)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#privilegedCallableUsingCurrentClassLoader(Callable)">privilegedCallableUsingCurrentClassLoader</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">Callable</A>&nbsp;callable)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Callable.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent"><CODE>Callable</CODE></A> object that will, when
@@ -316,7 +316,7 @@ Factory and utility methods for <A HREF="../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ExecutorService</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#unconfigurableExecutorService(edu.emory.mathcs.backport.java.util.concurrent.ExecutorService)">unconfigurableExecutorService</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ExecutorService</A>&nbsp;executor)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#unconfigurableExecutorService(ExecutorService)">unconfigurableExecutorService</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ExecutorService</A>&nbsp;executor)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an object that delegates all defined <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent"><CODE>ExecutorService</CODE></A> methods to the given executor, but not any
@@ -326,7 +326,7 @@ Factory and utility methods for <A HREF="../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ScheduledExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ScheduledExecutorService</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#unconfigurableScheduledExecutorService(edu.emory.mathcs.backport.java.util.concurrent.ScheduledExecutorService)">unconfigurableScheduledExecutorService</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ScheduledExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ScheduledExecutorService</A>&nbsp;executor)</CODE>
+<TD><CODE><B><A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/Executors.html#unconfigurableScheduledExecutorService(ScheduledExecutorService)">unconfigurableScheduledExecutorService</A></B>(<A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ScheduledExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent">ScheduledExecutorService</A>&nbsp;executor)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an object that delegates all defined <A HREF="../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/ScheduledExecutorService.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent"><CODE>ScheduledExecutorService</CODE></A> methods to the given executor, but

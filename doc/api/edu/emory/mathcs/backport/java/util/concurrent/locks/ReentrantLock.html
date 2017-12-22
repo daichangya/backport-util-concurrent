@@ -8,7 +8,7 @@
 ReentrantLock
 </TITLE>
 
-<META NAME="keywords" CONTENT="edu.emory.mathcs.backport.java.util.concurrent.locks.ReentrantLock class">
+<META NAME="keywords" CONTENT="edu.emory.mathcs.util.concurrent.locks.ReentrantLock class">
 
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../../stylesheet.css" TITLE="Style">
 
@@ -87,14 +87,14 @@ edu.emory.mathcs.backport.java.util.concurrent.locks</FONT>
 Class ReentrantLock</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.backport.java.util.concurrent.locks.ReentrantLock</B>
+  <IMG SRC="../../../../../../../../resources/inherit.gif" ALT="extended by"><B>edu.emory.mathcs.util.concurrent.locks.ReentrantLock</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD>edu.emory.mathcs.backport.java.util.concurrent.locks.CondVar.LockInfo, <A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/Lock.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent.locks">Lock</A>, java.io.Serializable</DD>
+<DT><B>All Implemented Interfaces:</B> <DD>CondVar.LockInfo, <A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/Lock.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent.locks">Lock</A>, java.io.Serializable</DD>
 </DL>
 <HR>
 <DL>
-<DT>public class <B>ReentrantLock</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/Lock.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent.locks">Lock</A>, java.io.Serializable, edu.emory.mathcs.backport.java.util.concurrent.locks.CondVar.LockInfo</DL>
+<DT>public class <B>ReentrantLock</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/Lock.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent.locks">Lock</A>, java.io.Serializable, CondVar.LockInfo</DL>
 
 <P>
 A reentrant mutual exclusion <A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/Lock.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent.locks"><CODE>Lock</CODE></A> with the same basic
@@ -164,7 +164,7 @@ A reentrant mutual exclusion <A HREF="../../../../../../../../edu/emory/mathcs/b
 <DL>
 <DT><B>Since:</B></DT>
   <DD>1.5</DD>
-<DT><B>See Also:</B><DD><A HREF="../../../../../../../../serialized-form.html#edu.emory.mathcs.backport.java.util.concurrent.locks.ReentrantLock">Serialized Form</A></DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../../serialized-form.html#ReentrantLock">Serialized Form</A></DL>
 <HR>
 
 <P>
@@ -328,7 +328,7 @@ A reentrant mutual exclusion <A HREF="../../../../../../../../edu/emory/mathcs/b
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/ReentrantLock.html#tryLock(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">tryLock</A></B>(long&nbsp;timeout,
+<TD><CODE><B><A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/ReentrantLock.html#tryLock(long, TimeUnit)">tryLock</A></B>(long&nbsp;timeout,
         <A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/TimeUnit.html" title="class in edu.emory.mathcs.backport.java.util.concurrent">TimeUnit</A>&nbsp;unit)</CODE>
 
 <BR>
@@ -507,7 +507,7 @@ public boolean <B>tryLock</B>()</PRE>
  This &quot;barging&quot; behavior can be useful in certain
  circumstances, even though it breaks fairness. If you want to honor
  the fairness setting for this lock, then use
- <A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/ReentrantLock.html#tryLock(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)"><CODE>tryLock(0, TimeUnit.SECONDS) </CODE></A>
+ <A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/ReentrantLock.html#tryLock(long, TimeUnit)"><CODE>tryLock(0, TimeUnit.SECONDS) </CODE></A>
  which is almost equivalent (it also detects interruption).
 
  <p> If the current thread
@@ -598,7 +598,7 @@ public boolean <B>tryLock</B>(long&nbsp;timeout,
  time.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/Lock.html#tryLock(long, edu.emory.mathcs.backport.java.util.concurrent.TimeUnit)">tryLock</A></CODE> in interface <CODE><A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/Lock.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent.locks">Lock</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/Lock.html#tryLock(long, TimeUnit)">tryLock</A></CODE> in interface <CODE><A HREF="../../../../../../../../edu/emory/mathcs/backport/java/util/concurrent/locks/Lock.html" title="interface in edu.emory.mathcs.backport.java.util.concurrent.locks">Lock</A></CODE></DL>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>timeout</CODE> - the time to wait for the lock<DD><CODE>unit</CODE> - the time unit of the timeout argument
@@ -770,7 +770,7 @@ public boolean <B>isHeldByCurrentThread</B>()</PRE>
  </pre>
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE>isHeldByCurrentThread</CODE> in interface <CODE>edu.emory.mathcs.backport.java.util.concurrent.locks.CondVar.LockInfo</CODE></DL>
+<DT><B>Specified by:</B><DD><CODE>isHeldByCurrentThread</CODE> in interface <CODE>CondVar.LockInfo</CODE></DL>
 </DD>
 <DD><DL>
 
