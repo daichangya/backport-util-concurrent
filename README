@@ -1,0 +1,193 @@
+README file for backport-util-concurrent 1.0
+http://www.mathcs.emory.edu/dcl/util/backport-util-concurrent/
+Nov 30, 2004
+
+
+* General Information
+
+This package is a backport of java.util.concurrent API, introduced
+in Java 5.0, to Java 1.4. The backport is based on sources from JSR 
+166 CVS repository (reconciled on Nov 30, 2004), and dl.util.concurrent 
+1.3.4. The backport is nearly complete; unsupported functionality is 
+limited mostly to the following classes: 1) ones that require explicit 
+JVM support (e.g. nanosecond clock), 2) some non-essential functions 
+described in the original javadoc as "designed primarily for use in 
+monitoring in system state, not for synchronization control", 3) 
+functionality that would affect performance, or 4) functionality that 
+would require development of substantial amount of new code.
+
+The purpose of this library is to enable gradual transition from Java 1.4 
+to 5.0: the library allows to develop concurrent applications for Java 1.4 
+that will work with Java 5.0 by simply changing package names.
+
+The package names of this backport are prefixed with: 
+"edu.emory.mathcs.backport". In other words, "java.util.concurrent" 
+becomes "edu.emory.mathcs.backport.java.util.concurrent". However,
+if really desired, it is possible to simply remove this prefix (using sed 
+or the like) and revert to 5.0 package names; in this case, however,
+programs must be launched in the specific way:
+
+java -Xbootclasspath/p:backport-util-concurrent.jar
+
+(and I am not even sure if this is going to work :)
+
+
+* License
+
+The code retains the original Doug Lea's public domain license. It is
+provided AS IS, without warranty of any kind, and can be used for any 
+purpose whatsoever without acknowledgement. Details in file license.html.
+A few source files are based on SUN implementation, and are subject to
+SUN source code license; these licenses are stated in file headers.
+
+
+* Implementation notes
+
+This is package is NOT an emulation code: it is adaptation of JSR 166
+and dl.u.c. code to Java 1.4. Expect performance at the level of dl.u.c.
+
+
+* What is supported
+
+All JSR 166 executors, utilities, and everything related (thread pools, 
+FutureTask, scheduled tasks and executors, etc)
+Locks: ReentrantLock, Semaphore, ReentrantReadWriteLock (see remarks 
+below), Conditions
+Queues: synchronous, array, linked, delay, and priority queues
+Atomics: everything except reflection-based updaters
+Other concurrency utils: CountDownLatch, CyclicBarrier
+Collections: ConcurrentHashMap, CopyOnWriteArrayList, CopyOnWriteArraySet
+
+
+* Stability
+
+The library passes all of attempted 941 tests from tck test package 
+designed for java.util.concurrent (the tests of unsupported funcionality 
+were skipped). Occasionally, there are failures of "condition timeout" test 
+cases of boolean Condition.await(timeout) and boolean 
+Condition.awaitUntil(Date), but it is because the tests assume stronger 
+semantics than required by the specification (see comments on Condition 
+below).
+
+The following classes were unit-tested:
+AbstractExecutorService
+AbstractQueue
+ArrayBlockingQueue
+AtomicBoolean
+Atomic[Integer,Long]Array
+Atomic[Integer,Long]
+AtomicMarkableReference
+AtomicReferenceArray
+AtomicReference
+AtomicStampedReference
+ConcurrentHashMap
+CopyOnWriteArray[List,Set]
+CountDownLatch
+CyclicBarrier
+DelayQueue
+Exchanger
+Executors
+ExecutorCompletionService
+FutureTask
+LinkedBlockingQueue
+PriorityBlockingQueue
+PriorityQueue
+ReentrantLock
+ReentrantReadWriteLock
+ScheduledExecutor
+Semaphore
+SynchronousQueue
+ThreadLocal
+ThreadPoolExecutor
+TimeUnit
+
+It is also important to stress out that vast proportion of this library 
+is based on source code from JSR 166 and dl.util.concurrent, both very 
+well tested. Whenever possible, the JSR 166 code was used. In cases when 
+it was infeasible (e.g. the JSR 166 code had strong dependencies on 
+native JVM support), the dl.util.concurrent code was adapted. The new 
+code was introduced only when absolutely neccessary, e.g. to make 
+dl.u.c. code conforming to JSR 166 interfaces and semantics.
+
+However, as any software, it may still contain bugs. If you find one,
+please report it, or better, contribute a fix. 
+
+
+* What is NOT supported
+
+Condition:
+long awaitNanos(long nanosTimeout) is not supported, since it cannot 
+accurately report remaining times with nanosecond precision. Similar,
+emulation method has been provided in the concurrent.helpers.Utils class.
+boolean await(timeout) and boolean awaitUntil(Date), called on 
+conditions obtained from locks, may sometimes wake up spuriously. This 
+is allowed by the Condition specification. However, it causes them to 
+occassionally fail tck unit tests. Maybe the tests are too rigorous, or 
+maybe the semantics of conditions returned from lock classes in 
+java.util.concurrent are stronger than required by the specification. 
+Nevertheless, this implementation still conforms to the specification.
+
+ReentrantLock:
+the following monitoring methods are not supported: boolean 
+hasWaiters(Condition), int getWaitQueueLength(Condition), Collection 
+getWaitingThreads(Condition).
+the following monitoring methods are supported only for fair locks: 
+boolean hasQueuedThreads(), int getQueueLength(), Collection 
+getQueuedThreads(), boolean isQueued().
+
+ReentrantReadWriteLock:
+this implementation is based on dl.u.c. 
+ReentrantWriterPreferenceReadWriteLock, and thus is a slight departure 
+from java.util.concurrent that does not specify acquisition order but 
+allows to enable/disable fairness. This implementation does not have a 
+single-parameter constructor allowing to specify fairness policy; it 
+always behaves like writer-preference lock with no fairness guarantees.
+Bacause of these characteristics, this class is compliant with JSR 166 
+specification of non-fair reentrant read-write locks, while the exact 
+semantics of fair locks are not supported (and the appropriate 
+constructor is missing).
+Also, the following instrumentation and status methods are not 
+supported: Collection getQueuedWriterThreads(), Collection 
+getQueuedReaderThreads(), boolean hasQueuedThreads(), boolean 
+hasQueuedThread(Thread), Collection getQueuedThreads(), boolean 
+hasWaiters(Condition), int getWaitQueueLength(Condition), Collection 
+getWaitingThreads(Condition).
+
+Semaphore:
+Atomic multi-acquires: tryAcquire(int permits) and tryAcquire(int 
+permits, long timeout, TimeUnit unit) are not supported.
+
+The following platform-level functionality is unsupported: 
+System.nanoTime(), UncaughtExceptionHandlers. However, the class
+concurrent.helpers.Utils features nanoTime() method which use high-
+precision timer on Java 1.4.2 via sun.misc.Perf (thanks to Craig Mattocks
+for suggesting this). Details in javadoc.
+
+The library strives to honor nanosecond timeouts, if such are requested, 
+by using two-parameter variant of Object.wait(). Note, however, that most 
+JVMs prior to 5.0 will round up the timeout to full milliseconds anyway.
+
+The following low-level concurrency classes are not supported: 
+LockSupport, AbstractQueuedSynchronizer.
+
+The following "atomic" utilities are not supported: 
+Atomic[Integer,Long,Reference]FieldUpdater.
+
+The following collection classes are not supported: LinkedList, 
+ConcurrentLinkedQueue.
+
+
+* Collaboration welcome
+
+We will happily accept any comments, suggestions, code contributions, 
+bug reports, bug fixes, etc.
+
+
+* References
+
+JSR 166 Interest site: http://gee.cs.oswego.edu/dl/concurrency-interest/
+dl.u.c.: http://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/concurrent/intro.html
+
+
+--
+Dawid Kurzyniec, dawidk@mathcs.emory.edu
