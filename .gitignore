@@ -22,11 +22,7 @@
 hs_err_pid*
 
 # idea ignore
-.idea/misc.xml
-.idea/workspace.xml
 .idea/
 *.ipr
 *.iml
-*.iws
-*/spring-dao.xml
-*/system.properties
+*.iwsl
