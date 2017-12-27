@@ -22,9 +22,9 @@
 hs_err_pid*
 
 # idea ignore
-.idea/
 .idea/misc.xml
 .idea/workspace.xml
+.idea/
 *.ipr
 *.iml
 *.iws
